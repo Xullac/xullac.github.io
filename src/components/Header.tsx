@@ -9,14 +9,8 @@ export const Header = () => {
     return (
         <>
             <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
-                <div className="max-w-6xl ml-72 px-6 py-4">
-                    <div className="flex items-center justify-between">
-                        <Link
-                            to="/"
-                            className="text-2xl font-bold text-black"
-                        >
-                            Silas Miller
-                        </Link>
+                <div className="max-w-auto px-6 py-4">
+                    <div className="flex items-center justify-center">
                         <div className="flex gap-8">
                             <Link
                                 to="/"
