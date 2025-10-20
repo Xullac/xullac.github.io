@@ -20,7 +20,7 @@ export function Frontpage() {
                 <div
                     className="absolute inset-0 bg-cover bg-center blur-sm"
                     style={{
-                        backgroundImage: "url('/my-react-app/public/images/backgroundFour.JPEG')",
+                        backgroundImage: "url('./images/backgroundFour.JPEG')",
                         filter: "blur(14px)",
                         transform: "scale(1)",
                     }}
