@@ -20,7 +20,7 @@ export function Frontpage() {
                 <div
                     className="absolute inset-0 bg-cover bg-center blur-sm"
                     style={{
-                        backgroundImage: "url('/images/backgroundFour.JPEG')",
+                        backgroundImage: "url('./images/backgroundFour.JPEG')",
                         filter: "blur(14px)",
                         transform: "scale(1)",
                     }}
@@ -38,18 +38,18 @@ export function Frontpage() {
                             <div className="text-center space-y-6">
 
                                 {/* Desktop version */}
-                                <Box display={{base: "none", md: "block"}} w={'600px'} justifySelf={'center'}
-                                >
+                                <Box display={{base: "none", md: "flex"}} justifyContent="center">
                                     <div
-                                        className="bg-black rounded-2xl p-8 shadow-lg transition-all transform bg-opacity-40">
+                                        className="bg-black rounded-2xl p-8 shadow-lg transition-all transform bg-opacity-40 text-center">
                                         <h1 className="text-6xl font-bold text-white leading-tight">
                                             Hi, I'm Silas Miller
                                         </h1>
                                     </div>
                                 </Box>
 
+
                                 {/* Mobile version */}
-                                <Box display={{base: "block", md: "none"}}>
+                                <Box display={{base: "flex", md: "none"}} justifyContent="center">
                                     <div
                                         className="bg-black rounded-2xl p-8 shadow-lg transition-all transform bg-opacity-40">
                                         <h1 className="text-6xl font-bold text-white leading-tight">
