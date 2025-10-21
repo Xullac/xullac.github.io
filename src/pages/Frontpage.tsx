@@ -17,14 +17,14 @@ export function Frontpage() {
         <>
             <div className="relative min-h-screen overflow-hidden">
                 {/* Background Image */}
-                <div
-                    className="absolute inset-0 bg-cover bg-center blur-sm"
+                <img
+                    className="absolute inset-0 w-full h-full object-cover blur-sm"
+                    alt={'background'}
+                    src={'https://i.postimg.cc/CxfgJPQr/background-Four.jpg'}
                     style={{
-                        backgroundImage: "url('./images/backgroundFour.JPEG')",
                         filter: "blur(14px)",
-                        transform: "scale(1)",
                     }}
-                ></div>
+                ></img>
 
                 {/* Foreground Content */}
                 <div
