@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {Provider} from "./components/ui/provider";
 import {Frontpage} from "./pages/Frontpage";
 import {Resume} from "./pages/Resume";
+import {PokemonPage} from './pages/PokemonPage';
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Frontpage/>}/>
                         <Route path="/resume" element={<Resume/>}/>
+                        <Route path="/pokemon" element={<PokemonPage/>}/>
                     </Routes>
                 </Router>
             </Provider>
