@@ -68,6 +68,12 @@ export function Frontpage() {
                                     >
                                         View My Resume
                                     </Link>
+                                    <Link
+                                        to="/pokemon"
+                                        className="px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 font-medium"
+                                    >
+                                        Pokemon Quiz
+                                    </Link>
                                     <button
                                         onClick={() => setIsContactOpen(true)}
                                         className="px-8 py-3 bg-white text-indigo-600 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-all font-medium"
