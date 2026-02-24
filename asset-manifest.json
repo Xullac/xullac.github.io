@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.7da132a8.css",
-    "main.js": "/static/js/main.f71addb5.js",
+    "main.css": "/static/css/main.2ad3deac.css",
+    "main.js": "/static/js/main.c2ad4e75.js",
     "static/js/453.311b3dbc.chunk.js": "/static/js/453.311b3dbc.chunk.js",
     "static/media/pikachu-and-caterpie-01.mp4": "/static/media/pikachu-and-caterpie-01.5af8f3ab8245c7f420f5.mp4",
+    "static/media/Logo-Black-WhiteBG.jpg": "/static/media/Logo-Black-WhiteBG.c6e9d59656841f1c8ac9.jpg",
     "static/media/pokeball-png-45330.png": "/static/media/pokeball-png-45330.a835fb9ba399394db72d.png",
     "index.html": "/index.html",
-    "main.7da132a8.css.map": "/static/css/main.7da132a8.css.map",
-    "main.f71addb5.js.map": "/static/js/main.f71addb5.js.map",
+    "main.2ad3deac.css.map": "/static/css/main.2ad3deac.css.map",
+    "main.c2ad4e75.js.map": "/static/js/main.c2ad4e75.js.map",
     "453.311b3dbc.chunk.js.map": "/static/js/453.311b3dbc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7da132a8.css",
-    "static/js/main.f71addb5.js"
+    "static/css/main.2ad3deac.css",
+    "static/js/main.c2ad4e75.js"
   ]
 }
