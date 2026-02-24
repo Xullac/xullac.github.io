@@ -138,7 +138,7 @@ Return ONLY valid JSON in this exact format, no other text:
 
 Make questions creative, evocative, and varied. Avoid repetition. Make answers feel meaningfully different from each other.`;
 
-    const response = await fetch('http://localhost:3001/api/anthropic', {
+    const response = await fetch('https://xullac-github-io.onrender.com/api/anthropic', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
