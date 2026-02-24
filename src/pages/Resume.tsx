@@ -36,21 +36,11 @@ export function Resume() {
     const isVisible = (section: unknown) => visibleSections.has(section);
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            {/* Hero Header */}
-            {/*<div className="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-lg border-b border-purple-500/20">*/}
-            {/*    <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">*/}
-            {/*        <a href="/" className="text-purple-400 hover:text-purple-300 transition-colors">*/}
-            {/*            ← Back*/}
-            {/*        </a>*/}
-            {/*        <h1 className="text-2xl font-bold text-white">Resume</h1>*/}
-            {/*        <div className="w-16"></div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
+        <div className="min-h-screen bg-gradient-to-br from-gray-950 via-slate-900 to-gray-900">
             <Header/>
 
-            {/* Main Content */}
             <div className="max-w-5xl mx-auto px-6 py-16">
+
                 {/* Header Section */}
                 <div
                     ref={addToRefs}
@@ -59,14 +49,20 @@ export function Resume() {
                         isVisible('header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                     }`}
                 >
-                    <h2 className="text-6xl font-bold text-white mb-4 pt-10">
-                        Silas Miller
-                    </h2>
-                    <p className="text-xl text-purple-300 mb-6">Full Stack Engineer</p>
-                    <div className="flex flex-wrap justify-center gap-6 text-gray-300">
+                    <h2 className="text-6xl font-bold text-white mb-4 pt-10">Silas Miller</h2>
+                    <p className="text-xl text-sky-400 mb-6 tracking-wide">Software Engineer</p>
+                    <div className="flex flex-wrap justify-center gap-6 text-slate-400">
                         <span>📍 Portland, OR 97202</span>
                         <span>📞 360-480-6881</span>
                         <span>✉️ silasmiller1998@gmail.com</span>
+                        <a
+                            href="https://www.linkedin.com/in/silas-miller-323464194/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sky-400 hover:text-sky-300 transition-colors"
+                        >
+                            🔗 LinkedIn
+                        </a>
                     </div>
                 </div>
 
@@ -78,14 +74,15 @@ export function Resume() {
                         isVisible('summary') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                     }`}
                 >
-                    <div
-                        className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
-                        <h3 className="text-3xl font-bold text-white mb-4">Summary</h3>
-                        <p className="text-gray-300 text-lg leading-relaxed">
-                            Dynamic Full Stack Engineer with expertise in developing and maintaining high-uptime web
-                            applications using React, Node.js, and Python. Proven ability in security compliance, Agile
-                            methodologies, and API integration to deliver innovative features that enhance user
-                            experience and align with industry standards.
+                    <div className="bg-slate-800/60 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/60">
+                        <h3 className="text-2xl font-bold text-white mb-4 tracking-wide uppercase text-sm text-sky-400">Summary</h3>
+                        <p className="text-slate-300 text-lg leading-relaxed">
+                            Experienced Software Engineer with a strong foundation in building secure, high-uptime SaaS
+                            applications using React, Python, and PostgreSQL. Proven ability in API development, cloud
+                            services (AWS, Azure), and designing scalable architectures. Recent graduate with a B.S. in
+                            Cybersecurity, eager to leverage analytical skills and a commitment to product development
+                            in a collaborative environment. Highly motivated to learn new technologies and frameworks,
+                            with strong communication and teamwork skills.
                         </p>
                     </div>
                 </div>
@@ -98,19 +95,43 @@ export function Resume() {
                         isVisible('skills') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                     }`}
                 >
-                    <h3 className="text-3xl font-bold text-white mb-6">Skills</h3>
-                    <div className="flex flex-wrap gap-3">
-                        {['React', 'Node.js', 'TypeScript', 'JavaScript', 'Python', 'SQL', 'AWS', 'Azure', 'Docker', 'CI/CD', 'Git', 'Agile', 'HIPAA', 'GDPR', 'OAuth', 'HTML5', 'DevOps'].map((skill, i) => (
-                            <span
-                                key={skill}
-                                style={{transitionDelay: `${i * 50}ms`}}
-                                className={`px-4 py-2 bg-purple-500/20 text-purple-200 rounded-lg border border-purple-500/30 hover:bg-purple-500/30 transition-all ${
-                                    isVisible('skills') ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
-                                }`}
-                            >
-                                {skill}
-                            </span>
-                        ))}
+                    <h3 className="text-sm font-bold text-sky-400 mb-6 uppercase tracking-widest">Core Skills</h3>
+
+                    <div className="space-y-5">
+                        <div className="bg-slate-800/60 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/60">
+                            <p className="text-slate-400 text-xs uppercase tracking-widest mb-4 font-semibold">Technical</p>
+                            <div className="flex flex-wrap gap-2">
+                                {['JavaScript', 'TypeScript', 'Python', 'PHP', 'React', 'Vue.js', 'Node.js', 'Django', 'Laravel', 'REST APIs', 'GraphQL', 'MySQL', 'PostgreSQL', 'Redis', 'AWS', 'Azure', 'Docker', 'CI/CD', 'Git', 'Linux', 'Playwright', 'Jest', 'OAuth', 'Figma', 'Postman', 'LLMs/AI', 'Tailwind', 'HTML', 'CSS'].map((skill, i) => (
+                                    <span
+                                        key={skill}
+                                        style={{transitionDelay: `${i * 30}ms`}}
+                                        className={`px-3 py-1.5 bg-sky-900/30 text-sky-300 rounded-md border border-sky-800/50 text-sm hover:bg-sky-800/40 transition-all ${
+                                            isVisible('skills') ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+                                        }`}
+                                    >
+                                        {skill}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="bg-slate-800/60 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/60">
+                            <p className="text-slate-400 text-xs uppercase tracking-widest mb-4 font-semibold">Tools &
+                                Processes</p>
+                            <div className="flex flex-wrap gap-2">
+                                {['Agile', 'Scrum', 'JIRA', 'Confluence', 'QA/UAT', 'Regression Testing', 'SaaS', 'Product Development', 'Data Privacy', 'S3', 'HubSpot', 'Documentation'].map((skill, i) => (
+                                    <span
+                                        key={skill}
+                                        style={{transitionDelay: `${i * 30}ms`}}
+                                        className={`px-3 py-1.5 bg-slate-700/50 text-slate-300 rounded-md border border-slate-600/50 text-sm hover:bg-slate-600/50 transition-all ${
+                                            isVisible('skills') ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+                                        }`}
+                                    >
+                                        {skill}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -122,106 +143,85 @@ export function Resume() {
                         isVisible('experience') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                     }`}
                 >
-                    <h3 className="text-3xl font-bold text-white mb-8">Experience</h3>
+                    <h3 className="text-sm font-bold text-sky-400 mb-8 uppercase tracking-widest">Experience</h3>
 
-                    <div className="space-y-8">
+                    <div className="space-y-6">
                         {/* Job 1 */}
                         <div
-                            className="bg-gradient-to-br from-slate-800/50 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all">
-                            <div className="flex justify-between items-start mb-4">
+                            className="bg-slate-800/60 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/60 hover:border-slate-600 transition-all">
+                            <div className="flex justify-between items-start mb-4 flex-wrap gap-2">
                                 <div>
-                                    <h4 className="text-2xl font-bold text-white">Full Stack Developer - Contract</h4>
-                                    <p className="text-purple-300 text-lg">Human Intelligence, Inc</p>
+                                    <h4 className="text-xl font-bold text-white">Software Engineer – Contract</h4>
+                                    <p className="text-sky-400">Human Intelligence, Inc</p>
                                 </div>
-                                <span className="text-gray-400 whitespace-nowrap">Aug 2025 - Present</span>
+                                <span
+                                    className="text-slate-500 text-sm whitespace-nowrap bg-slate-700/50 px-3 py-1 rounded-full">Aug 2025 – Present</span>
                             </div>
-                            <ul className="space-y-3 text-gray-300">
-                                <li className="flex items-start">
-                                    <span className="text-purple-400 mr-3">▹</span>
-                                    <span>Developed robust Web Applications for increased user satisfaction and better functionality, adhering to security policies and industry standards</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="text-purple-400 mr-3">▹</span>
-                                    <span>Enhanced website responsiveness with front-end development techniques, resulting in improved user experience and UI consistency</span>
-                                </li>
+                            <ul className="space-y-2.5 text-slate-300">
+                                {[
+                                    'Provided guidance throughout all phases of the SDLC, ensuring adherence to security policies and industry standards.',
+                                    'Leveraged strong problem-solving skills to troubleshoot issues and ensure system reliability and stability.',
+                                    'Developed robust web applications, enhancing user satisfaction and functionality through data analytics and business intelligence.',
+                                    'Enhanced website responsiveness and UI consistency using front-end development techniques and responsive design principles.',
+                                    'Contributed to intuitive user interfaces and dashboards for complex applications, improving overall UX.',
+                                ].map((item, i) => (
+                                    <li key={i} className="flex items-start">
+                                        <span className="text-sky-500 mr-3 mt-1 text-xs">▹</span>
+                                        <span className="text-sm leading-relaxed">{item}</span>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
 
                         {/* Job 2 */}
                         <div
-                            className="bg-gradient-to-br from-slate-800/50 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all">
-                            <div className="flex justify-between items-start mb-4">
+                            className="bg-slate-800/60 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/60 hover:border-slate-600 transition-all">
+                            <div className="flex justify-between items-start mb-4 flex-wrap gap-2">
                                 <div>
-                                    <h4 className="text-2xl font-bold text-white">Full Stack Developer</h4>
-                                    <p className="text-purple-300 text-lg">Loyalti, Portland, OR</p>
+                                    <h4 className="text-xl font-bold text-white">Software Engineer</h4>
+                                    <p className="text-sky-400">Loyalti, Portland, OR</p>
                                 </div>
-                                <span className="text-gray-400 whitespace-nowrap">Jan 2023 - Jan 2025</span>
+                                <span
+                                    className="text-slate-500 text-sm whitespace-nowrap bg-slate-700/50 px-3 py-1 rounded-full">Jan 2022 – Jul 2025</span>
                             </div>
-                            <ul className="space-y-3 text-gray-300">
-                                <li className="flex items-start">
-                                    <span className="text-purple-400 mr-3">▹</span>
-                                    <span>Built and updated retail software with 99.8% uptime, deployed nationally and internationally</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="text-purple-400 mr-3">▹</span>
-                                    <span>Delivered innovative features under accelerated sprint timelines using Python, React, SQL, and TypeScript</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="text-purple-400 mr-3">▹</span>
-                                    <span>Developed and tested security/privacy features for GDPR and U.S. federal compliance</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="text-purple-400 mr-3">▹</span>
-                                    <span>Led Scrum ceremonies, sprint estimation, and capacity planning for international distributed teams</span>
-                                </li>
+                            <ul className="space-y-2.5 text-slate-300">
+                                {[
+                                    'Provided guidance throughout all phases of the SDLC, ensuring adherence to security policies and industry standards.',
+                                    'Leveraged strong analytical and problem-solving skills to troubleshoot issues and maintain system reliability.',
+                                    'Developed robust web applications contributing to business intelligence through data analytics.',
+                                    'Enhanced website responsiveness and UI consistency through responsive web design principles.',
+                                    'Contributed to intuitive user interfaces and dashboards, ensuring a seamless experience for complex applications.',
+                                ].map((item, i) => (
+                                    <li key={i} className="flex items-start">
+                                        <span className="text-sky-500 mr-3 mt-1 text-xs">▹</span>
+                                        <span className="text-sm leading-relaxed">{item}</span>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
 
                         {/* Job 3 */}
                         <div
-                            className="bg-gradient-to-br from-slate-800/50 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all">
-                            <div className="flex justify-between items-start mb-4">
+                            className="bg-slate-800/60 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/60 hover:border-slate-600 transition-all">
+                            <div className="flex justify-between items-start mb-4 flex-wrap gap-2">
                                 <div>
-                                    <h4 className="text-2xl font-bold text-white">QA Technical Engineer</h4>
-                                    <p className="text-purple-300 text-lg">Loyalti, Portland, OR</p>
+                                    <h4 className="text-xl font-bold text-white">QA / IT Support Specialist</h4>
+                                    <p className="text-sky-400">SnowShoe, Portland, OR</p>
                                 </div>
-                                <span className="text-gray-400 whitespace-nowrap">Jan 2022 - Jan 2023</span>
+                                <span
+                                    className="text-slate-500 text-sm whitespace-nowrap bg-slate-700/50 px-3 py-1 rounded-full">Jan 2021 – Jan 2022</span>
                             </div>
-                            <ul className="space-y-3 text-gray-300">
-                                <li className="flex items-start">
-                                    <span className="text-purple-400 mr-3">▹</span>
-                                    <span>Conducted final QA testing and authored comprehensive bug reports, ensuring consistent product quality</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="text-purple-400 mr-3">▹</span>
-                                    <span>Partnered with development teams to enhance product quality and troubleshoot issues</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="text-purple-400 mr-3">▹</span>
-                                    <span>Supported onboarding of a company acquisition, integrating data from hundreds of retailers</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        {/* Job 4 */}
-                        <div
-                            className="bg-gradient-to-br from-slate-800/50 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all">
-                            <div className="flex justify-between items-start mb-4">
-                                <div>
-                                    <h4 className="text-2xl font-bold text-white">QA / Technical Support Specialist</h4>
-                                    <p className="text-purple-300 text-lg">SnowShoe, Portland, OR</p>
-                                </div>
-                                <span className="text-gray-400 whitespace-nowrap">Jan 2021 - Jan 2022</span>
-                            </div>
-                            <ul className="space-y-3 text-gray-300">
-                                <li className="flex items-start">
-                                    <span className="text-purple-400 mr-3">▹</span>
-                                    <span>Delivered technical solutions and maintained high client satisfaction for end-users</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="text-purple-400 mr-3">▹</span>
-                                    <span>Managed IT tasks including hardware configuration and internal technical support</span>
-                                </li>
+                            <ul className="space-y-2.5 text-slate-300">
+                                {[
+                                    'Acted as liaison between engineering and support teams to ensure seamless deployments and effective communication.',
+                                    'Resolved issues by troubleshooting and delivering technical solutions with high client satisfaction.',
+                                    'Maintained high client satisfaction through effective troubleshooting and clear communication.',
+                                ].map((item, i) => (
+                                    <li key={i} className="flex items-start">
+                                        <span className="text-sky-500 mr-3 mt-1 text-xs">▹</span>
+                                        <span className="text-sm leading-relaxed">{item}</span>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
@@ -235,19 +235,17 @@ export function Resume() {
                         isVisible('education') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                     }`}
                 >
-                    <h3 className="text-3xl font-bold text-white mb-6">Education</h3>
-                    <div className="space-y-6">
-                        <div
-                            className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20">
-                            <h4 className="text-xl font-bold text-white">B.S. Cybersecurity & Information Assurance</h4>
-                            <p className="text-purple-300">Western Governors University</p>
-                            <p className="text-gray-400">October 2025</p>
+                    <h3 className="text-sm font-bold text-sky-400 mb-6 uppercase tracking-widest">Education</h3>
+                    <div className="space-y-4">
+                        <div className="bg-slate-800/60 backdrop-blur-sm rounded-xl p-6 border border-slate-700/60">
+                            <h4 className="text-lg font-bold text-white">B.S. Cybersecurity & Information Assurance</h4>
+                            <p className="text-sky-400 text-sm">Western Governors University</p>
+                            <p className="text-slate-500 text-sm mt-1">October 2025</p>
                         </div>
-                        <div
-                            className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20">
-                            <h4 className="text-xl font-bold text-white">DigiPen Computer Science Program</h4>
-                            <p className="text-purple-300">New Market Skills Center</p>
-                            <p className="text-gray-400">June 2016</p>
+                        <div className="bg-slate-800/60 backdrop-blur-sm rounded-xl p-6 border border-slate-700/60">
+                            <h4 className="text-lg font-bold text-white">Computer Science Program</h4>
+                            <p className="text-sky-400 text-sm">New Market Skills Center — DigiPen</p>
+                            <p className="text-slate-500 text-sm mt-1">June 2016</p>
                         </div>
                     </div>
                 </div>
@@ -260,22 +258,32 @@ export function Resume() {
                         isVisible('certifications') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                     }`}
                 >
-                    <h3 className="text-3xl font-bold text-white mb-6">Certifications</h3>
-                    <div className="grid md:grid-cols-2 gap-4">
-                        {['CompTIA A+', 'CompTIA Security+', 'CompTIA CySA+', 'ITIL 4 Foundation', 'CompTIA Network+', 'CompTIA Project+', 'SSCP', 'CompTIA PenTest+'].map((cert, i) => (
+                    <h3 className="text-sm font-bold text-sky-400 mb-6 uppercase tracking-widest">Certifications</h3>
+                    <div className="grid md:grid-cols-2 gap-3">
+                        {[
+                            'CompTIA A+',
+                            'CompTIA Security+',
+                            'CompTIA CySA+',
+                            'CompTIA Network+',
+                            'CompTIA Project+',
+                            'CompTIA PenTest+',
+                            'ITIL 4 Foundation',
+                            'SSCP',
+                        ].map((cert, i) => (
                             <div
                                 key={cert}
                                 style={{transitionDelay: `${i * 100}ms`}}
-                                className={`bg-gradient-to-r from-green-500/10 to-blue-500/10 backdrop-blur-sm rounded-lg p-4 border border-green-500/20 transition-all ${
+                                className={`bg-slate-800/60 backdrop-blur-sm rounded-lg p-4 border border-slate-700/60 hover:border-slate-600 transition-all flex items-center gap-3 ${
                                     isVisible('certifications') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
                                 }`}
                             >
-                                <span className="text-green-400 mr-2">✓</span>
-                                <span className="text-white font-medium">{cert}</span>
+                                <span className="text-emerald-400 text-lg">✓</span>
+                                <span className="text-slate-200 font-medium text-sm">{cert}</span>
                             </div>
                         ))}
                     </div>
                 </div>
+
             </div>
         </div>
     );

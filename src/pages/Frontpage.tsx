@@ -7,11 +7,17 @@ import {
     DialogBody,
     DialogBackdrop,
     Button,
-    Box
+    Box,
+    Flex,
+    Text
 } from "@chakra-ui/react";
+import pokeball from '../images/pokeball-png-45330.png';
+import hiilogo from '../images/Logo-Black-WhiteBG.jpg';
+
 
 export function Frontpage() {
     const [isContactOpen, setIsContactOpen] = React.useState(false);
+    const [isWorkOpen, setIsWorkOpen] = React.useState(false);
 
     return (
         <>
@@ -68,15 +74,15 @@ export function Frontpage() {
                                     >
                                         View My Resume
                                     </Link>
-                                    <Link
-                                        to="/pokemon"
+                                    <button
+                                        onClick={() => setIsWorkOpen(true)}
                                         className="px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 font-medium"
                                     >
-                                        Pokemon Quiz
-                                    </Link>
+                                        My Work
+                                    </button>
                                     <button
                                         onClick={() => setIsContactOpen(true)}
-                                        className="px-8 py-3 bg-white text-indigo-600 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-all font-medium"
+                                        className="px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 font-medium"
                                     >
                                         Get In Touch
                                     </button>
@@ -225,6 +231,115 @@ export function Frontpage() {
                                     background={'blue.200'} fontWeight={600} border={'1px'} borderColor={'black'}
                                     boxShadow={'0px 0px 4px 0px'} _hover={{transform: 'scale(1.1)'}}
                                     alignItems={'center'} justifyContent={'center'}>Close</Button>
+                        </DialogBody>
+                    </DialogContent>
+                </DialogRoot>
+                <DialogRoot
+                    open={isWorkOpen}
+                    onOpenChange={(e) => setIsWorkOpen(e.open)}
+                >
+                    <DialogBackdrop/>
+                    <DialogContent
+                        borderRadius={'8px'}
+                        borderBottomRadius={'8px'}
+                        style={{
+                            position: 'fixed',
+                            top: '50%',
+                            left: '50%',
+                            transform: 'translate(-50%, -50%)',
+                            zIndex: 1400,
+                            maxWidth: '500px',
+                            width: '90%'
+                        }}
+                    >
+                        <DialogBody bg={'gray.100'} borderRadius={'8px'} p={6}>
+
+                            {/* Cards */}
+                            <Flex gap={4} justify={'center'} wrap={'wrap'}>
+
+                                {/* Human Intelligence Card */}
+                                <Box
+                                    as="a"
+                                    //@ts-ignore
+                                    href="https://www.humancreator.org/start"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    bg={'white'}
+                                    border={'1px'}
+                                    borderColor={'gray.200'}
+                                    borderRadius={'12px'}
+                                    boxShadow={'0px 2px 8px rgba(0,0,0,0.10)'}
+                                    _hover={{
+                                        transform: 'scale(1.04)',
+                                        boxShadow: '0px 4px 16px rgba(0,0,0,0.18)',
+                                        borderColor: 'gray.400',
+                                    }}
+                                    transition={'all 0.2s ease'}
+                                    cursor={'pointer'}
+                                    p={6}
+                                    flex={'1'}
+                                    minW={'160px'}
+                                    maxW={'200px'}
+                                    display={'flex'}
+                                    flexDirection={'column'}
+                                    alignItems={'center'}
+                                    gap={3}
+                                >
+                                    <img
+                                        src={hiilogo}
+                                        alt="Human Intelligence"
+                                        style={{width: '80px', height: '80px', objectFit: 'contain'}}
+                                    />
+                                    <Text fontWeight={700} fontSize={'sm'} color={'black'} textAlign={'center'}>
+                                        Human Intelligence
+                                    </Text>
+                                    <Text fontSize={'xs'} color={'gray.500'} textAlign={'center'}>
+                                        humancreator.org
+                                    </Text>
+                                </Box>
+
+                                {/* Pokémon Quiz Card */}
+                                <Box
+                                    as="a"
+                                    //@ts-ignore
+                                    href="https://xullac.github.io/pokemon"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    bg={'white'}
+                                    border={'1px'}
+                                    borderColor={'gray.200'}
+                                    borderRadius={'12px'}
+                                    boxShadow={'0px 2px 8px rgba(0,0,0,0.10)'}
+                                    _hover={{
+                                        transform: 'scale(1.04)',
+                                        boxShadow: '0px 4px 16px rgba(0,0,0,0.18)',
+                                        borderColor: 'gray.400',
+                                    }}
+                                    transition={'all 0.2s ease'}
+                                    cursor={'pointer'}
+                                    p={6}
+                                    flex={'1'}
+                                    minW={'160px'}
+                                    maxW={'200px'}
+                                    display={'flex'}
+                                    flexDirection={'column'}
+                                    alignItems={'center'}
+                                    gap={3}
+                                >
+                                    <img
+                                        src={pokeball}
+                                        alt="Pokémon Quiz"
+                                        style={{width: '80px', height: '80px', objectFit: 'contain'}}
+                                    />
+                                    <Text fontWeight={700} fontSize={'sm'} color={'black'} textAlign={'center'}>
+                                        Which Pokémon Are You?
+                                    </Text>
+                                    <Text fontSize={'xs'} color={'gray.500'} textAlign={'center'}>
+                                        xullac.github.io
+                                    </Text>
+                                </Box>
+
+                            </Flex>
                         </DialogBody>
                     </DialogContent>
                 </DialogRoot>
